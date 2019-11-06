@@ -83,6 +83,8 @@ public class KeyEventModule extends ReactContextBaseJavaModule {
             params.putInt("repeatcount", repeatCount);
         }
 
+        params.putBoolean("shiftPressed", keyEvent.isShiftPressed());
+        params.putBoolean("ctrlPressed", keyEvent.isCtrlPressed());
         params.putInt("keyCode", keyCode);
         params.putInt("action", action);
         params.putString("pressedKey", String.valueOf(pressedKey));
